@@ -1,9 +1,12 @@
 from score import add_score
+<<<<<<< HEAD
 from games.memorygame import play as memory_play
 from games.guessgame import play as guess_play
 from games.currencyroulettegame import play as currency_play
 from utils import scores_file_name, bad_return_code
 
+=======
+>>>>>>> db704caa2a7a5ae4f869ff5bb75390dd6b64b788
 def welcome():
     name = input('Hello, what is your name?: ')
     print(f'Hello {name} and welcome to the World of Games (WoG).\nHere you can find many cool games to play.')
@@ -36,9 +39,21 @@ def load_game():
             print("can't use string")
 
     if choose_game == 1:
+<<<<<<< HEAD
         memory_play(choose_dif, scores_file_name, bad_return_code)
     elif choose_game == 2:
         guess_play(choose_dif, scores_file_name, bad_return_code)
     elif choose_game == 3:
         currency_play(choose_dif, scores_file_name, bad_return_code)
     add_score(choose_dif, scores_file_name, bad_return_code)
+=======
+        from memorygame import play
+        play(choose_dif)
+    elif choose_game == 2:
+        from guessgame import play
+        play(choose_dif)
+    elif choose_game == 3:
+        from currencyroulettegame import play
+        play(choose_dif)
+    add_score(choose_dif)
+>>>>>>> db704caa2a7a5ae4f869ff5bb75390dd6b64b788
